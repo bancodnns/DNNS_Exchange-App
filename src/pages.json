@@ -1,0 +1,108 @@
+{
+	"pages": [ 
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		/*{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}*/
+
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText" : "登录"
+			}
+    },
+    {
+			"path": "pages/login/forget",
+			"style": {
+				"navigationBarTitleText" : "忘记密码"
+			}
+    },
+    {
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText" : "注册"
+			}
+    },
+    {
+			"path": "pages/login/register_code",
+			"style": {
+				"navigationBarTitleText" : "注册"
+			}
+    },
+    {
+			"path": "pages/login/register_successful",
+			"style": {
+				"navigationBarTitleText" : "注册"
+			}
+		},
+    // my profile
+    {
+			"path": "pages/profile/index_mine",
+			"style": {
+				"navigationBarTitleText" : "我的",
+				"app-plus": {
+					"titleNView": true
+				}
+			}
+		},
+    {
+			"path": "pages/wallet/index_wallet",
+			"style": {
+				"navigationStyle" : "custom", //隐藏导航栏
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+  "tabBar": {
+    "backgroundColor" : "#fff",
+    "color" : "#999999",
+    "selectedColor" : "#0684f0",
+    "list": [
+      // {
+      //   "pagePath": "pages/tabBar/component/component",
+      //   "iconPath": "static/component.png",
+      //   "selectedIconPath": "static/componentHL.png",
+      //   "text": "首页"
+      // },
+      {
+        "pagePath": "pages/wallet/index_wallet",
+        "iconPath": "static/icons/tab_home_gray.png",
+        "selectedIconPath": "static/icons/tab_home_blue.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/wallet/index_wallet",
+        "iconPath": "static/icons/tab_price_gray.png",
+        "selectedIconPath": "static/icons/tab_price_blue.png",
+        "text": "行情"
+      }, {
+        "pagePath": "pages/wallet/index_wallet",
+        "iconPath": "static/icons/tab_trade_gray.png",
+        "selectedIconPath": "static/icons/tab_trade_blue.png",
+        "text": "交易"
+      }, {
+        "pagePath": "pages/wallet/index_wallet",
+        "iconPath": "static/icons/tab_optional_gray.png",
+        "selectedIconPath": "static/icons/tab_optional_blue.png",
+        "text": "资金"
+      },
+      {
+        "pagePath": "pages/profile/index_mine",
+        "iconPath": "static/icons/tab_user_grey.png",
+        "selectedIconPath": "static/icons/tab_user_blue.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

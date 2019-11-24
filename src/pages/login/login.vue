@@ -6,12 +6,12 @@
     <view class="login_form">
 			<view class="uni-form-item uni-column">
 				<view class="title">邮箱</view>
-				<input class="uni-input" focus placeholder="请输入邮箱" />
+				<input class="uni-input" focus placeholder="请输入邮箱" v-model="userPhone" />
 			</view>
 			<view class="uni-form-item uni-column">
 				<view class="title">密码</view>
 				<view class="with-fun">
-					<input class="uni-input" placeholder="请输入密码" :password="showPassword"/>
+					<input class="uni-input" placeholder="请输入密码" :password="showPassword" v-model="userPwd" />
 					<view class="uni-icon" :class="[!showPassword ? 'uni-active' : '']" @click="changePassword">
             <image src="../../static/icons/icon_logon_close.png" v-if="showPassword" class="icon_eye"></image>
             <image src="../../static/icons/icon_logon_open.png" v-else class="icon_eye"></image>
@@ -32,6 +32,8 @@
 export default {
   data(){
     return{
+      userPhone:'',
+			userPwd:'',
       showPassword: true,
     }
   },
@@ -46,7 +48,20 @@ export default {
         url: 'register'
       })
     },
+    // login(){
+    //   uni.switchTab({
+    //     url: '../profile/index_mine'
+    //   });
+    // },
     login(){
+      if (this.userPhone == '') {
+        uni.showToast({ title: '请输入手机号',icon:'none'});
+        return false;
+      }
+      if (this.userPwd == '') {
+        uni.showToast({ title: '请输入密码',icon:'none'});
+        return false;
+      }
       uni.switchTab({
         url: '../profile/index_mine'
       });

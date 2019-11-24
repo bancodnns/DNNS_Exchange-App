@@ -56,6 +56,15 @@
 					"titleNView": false
 				}
 			}
+    },
+    {
+			"path": "pages/mining/index_mining",
+			"style": {
+				"navigationStyle" : "custom", //隐藏导航栏
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"globalStyle": {
@@ -76,18 +85,18 @@
       //   "text": "首页"
       // },
       {
-        "pagePath": "pages/wallet/index_wallet",
+        "pagePath": "",
         "iconPath": "static/icons/tab_home_gray.png",
         "selectedIconPath": "static/icons/tab_home_blue.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/wallet/index_wallet",
+        "pagePath": "",
         "iconPath": "static/icons/tab_price_gray.png",
         "selectedIconPath": "static/icons/tab_price_blue.png",
         "text": "行情"
       }, {
-        "pagePath": "pages/wallet/index_wallet",
+        "pagePath": "pages/mining/index_mining",
         "iconPath": "static/icons/tab_trade_gray.png",
         "selectedIconPath": "static/icons/tab_trade_blue.png",
         "text": "交易"
